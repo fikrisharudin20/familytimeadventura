@@ -1,0 +1,25 @@
+{
+	"color": "#ffe63fbc",
+	"description": "",
+	"display_name": "Mother",
+	"display_name_bool": true,
+	"id": "character-1737328591.json",
+	"mirror_portraits": false,
+	"name": "Mother.json",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -85,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://NPC/mama cat head-Sheet.png"
+		},
+		{
+			"name": "No shine",
+			"path": "res://NPC/mama cat head-Sheet2.png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1737147892.cfg"
+}

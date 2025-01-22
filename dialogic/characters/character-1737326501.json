@@ -1,0 +1,25 @@
+{
+	"color": "#ff1b47f4",
+	"description": "",
+	"display_name": "Sister",
+	"display_name_bool": true,
+	"id": "character-1737326501.json",
+	"mirror_portraits": false,
+	"name": "Sister.json",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -85,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://NPC/little angry jiro 2-Sheet.png"
+		},
+		{
+			"name": "Angy",
+			"path": "res://NPC/little angry jiro 2-Sheet (2).png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1737147892.cfg"
+}

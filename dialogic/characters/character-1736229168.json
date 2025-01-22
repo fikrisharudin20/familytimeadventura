@@ -1,0 +1,21 @@
+{
+	"color": "#ff855610",
+	"description": "",
+	"display_name": "Father",
+	"display_name_bool": true,
+	"id": "character-1736229168.json",
+	"mirror_portraits": false,
+	"name": "Father.json",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -75,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://NPC/papa cat head 1-Sheet.png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1737147892.cfg"
+}

@@ -1,0 +1,74 @@
+{
+	"events": [
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 0.005,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1736229168.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://dialoguesound.mp3",
+			"volume": 0.2
+		},
+		{
+			"character": "character-1736229168.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, Zoro! How are you bud! "
+		},
+		{
+			"character": "character-1736229168.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "I need a hand in washing the car, would you mind helping your pops 'ere?"
+		},
+		{
+			"choice": "Yes, would love to!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "wash_car",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "No, later dad ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1736229215.json",
+		"name": "timeline-1.json"
+	}
+}

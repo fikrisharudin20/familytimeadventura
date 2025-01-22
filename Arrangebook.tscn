@@ -1,0 +1,208 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/bg bookshelf.png" type="Texture" id=1]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/bookshelf.png" type="Texture" id=2]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/book1-removebg-preview.png" type="Texture" id=3]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/booksonshelf/book4.png" type="Texture" id=4]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/booksonshelf/book3.png" type="Texture" id=5]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/booksonshelf/book5.png" type="Texture" id=6]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/booksonshelf/book 2.png" type="Texture" id=7]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/booksonshelf/Pixilart selection (1).png" type="Texture" id=8]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/booksonshelf/book8.png" type="Texture" id=9]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/booksonshelf/book6.png" type="Texture" id=10]
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Groundbook.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/book_2-removebg-preview.png" type="Texture" id=13]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/book3-removebg-preview.png" type="Texture" id=14]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/book4.png" type="Texture" id=15]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/book6-removebg-preview.png" type="Texture" id=16]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/book8-removebg-preview.png" type="Texture" id=17]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/book5-removebg-preview.png" type="Texture" id=18]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bookish/Pixilart_selection__1_-removebg-preview.png" type="Texture" id=19]
+[ext_resource path="res://Arrangebook.gd" type="Script" id=20]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/download-removebg-preview.png" type="Texture" id=21]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/second pola.png" type="Texture" id=22]
+[ext_resource path="res://gamemusic.mp3" type="AudioStream" id=23]
+
+[node name="Arrangebook" type="Node2D"]
+script = ExtResource( 20 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 256, 152 )
+scale = Vector2( 0.479773, 0.47337 )
+texture = ExtResource( 1 )
+
+[node name="Bookshelf" type="Sprite" parent="."]
+position = Vector2( 192, 136 )
+scale = Vector2( 0.319684, 0.319684 )
+texture = ExtResource( 2 )
+
+[node name="Groundbook1" parent="." instance=ExtResource( 12 )]
+position = Vector2( 86, 218 )
+scale = Vector2( -0.182382, 0.215655 )
+
+[node name="Groundbook1" type="Sprite" parent="Groundbook1"]
+texture = ExtResource( 3 )
+
+[node name="Groundbook2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 275, 254 )
+scale = Vector2( 0.240436, 0.240436 )
+
+[node name="Groundbook2" type="Sprite" parent="Groundbook2"]
+position = Vector2( 10.2618, 0 )
+scale = Vector2( 0.895726, 0.850253 )
+texture = ExtResource( 13 )
+
+[node name="Groundbook3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 144, 259 )
+scale = Vector2( 0.230319, 0.230319 )
+
+[node name="Sprite" type="Sprite" parent="Groundbook3"]
+texture = ExtResource( 14 )
+
+[node name="Booktest" type="YSort" parent="Groundbook3"]
+position = Vector2( -412.669, -742.23 )
+scale = Vector2( 2.86575, 2.86575 )
+
+[node name="Shelfbook2" type="Sprite" parent="Groundbook3/Booktest"]
+visible = false
+position = Vector2( 192, 64 )
+scale = Vector2( 0.322568, 0.322568 )
+texture = ExtResource( 7 )
+
+[node name="Shelfbook3" type="Sprite" parent="Groundbook3/Booktest"]
+visible = false
+position = Vector2( 240, 64 )
+scale = Vector2( 0.412695, 0.412695 )
+texture = ExtResource( 5 )
+
+[node name="Shelfbook4" type="Sprite" parent="Groundbook3/Booktest"]
+visible = false
+position = Vector2( 138, 100 )
+scale = Vector2( 0.307638, 0.307638 )
+texture = ExtResource( 4 )
+
+[node name="Shelfbook5" type="Sprite" parent="Groundbook3/Booktest"]
+visible = false
+position = Vector2( 140, 136 )
+scale = Vector2( 0.303432, 0.303432 )
+texture = ExtResource( 6 )
+
+[node name="Shelfbook6" type="Sprite" parent="Groundbook3/Booktest"]
+visible = false
+position = Vector2( 186, 170 )
+scale = Vector2( 0.309755, 0.309755 )
+texture = ExtResource( 10 )
+
+[node name="Shelfbook7" type="Sprite" parent="Groundbook3/Booktest"]
+visible = false
+position = Vector2( 234, 170 )
+scale = Vector2( 0.3303, 0.3303 )
+texture = ExtResource( 8 )
+
+[node name="Shelfbook8" type="Sprite" parent="Groundbook3/Booktest"]
+visible = false
+position = Vector2( 241, 205 )
+scale = Vector2( 0.311383, 0.311383 )
+texture = ExtResource( 9 )
+
+[node name="Groundbook4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 364, 184 )
+scale = Vector2( 0.245962, 0.245962 )
+
+[node name="Sprite" type="Sprite" parent="Groundbook4"]
+scale = Vector2( 0.856834, 0.856834 )
+texture = ExtResource( 15 )
+
+[node name="Groundbook5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 37, 263 )
+scale = Vector2( 0.211745, 0.211745 )
+
+[node name="Sprite" type="Sprite" parent="Groundbook5"]
+texture = ExtResource( 18 )
+
+[node name="Groundbook6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 375, 256 )
+scale = Vector2( 0.241045, 0.241045 )
+
+[node name="Sprite" type="Sprite" parent="Groundbook6"]
+texture = ExtResource( 16 )
+
+[node name="Groundbook7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 439, 261 )
+scale = Vector2( 0.205201, 0.205201 )
+
+[node name="Sprite" type="Sprite" parent="Groundbook7"]
+position = Vector2( 7.69629, 2.56543 )
+scale = Vector2( 0.749725, 0.749725 )
+texture = ExtResource( 19 )
+
+[node name="Groundbook8" parent="." instance=ExtResource( 12 )]
+position = Vector2( 208, 248 )
+scale = Vector2( 0.220789, 0.220789 )
+
+[node name="Sprite" type="Sprite" parent="Groundbook8"]
+scale = Vector2( 0.75599, 0.75599 )
+texture = ExtResource( 17 )
+
+[node name="Platform1" parent="." instance=ExtResource( 11 )]
+position = Vector2( 138, 62 )
+scale = Vector2( 0.144143, 0.143744 )
+
+[node name="Platform2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 191, 62 )
+scale = Vector2( 0.13038, 0.125462 )
+
+[node name="Platform3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 242, 62 )
+scale = Vector2( 0.12751, 0.118133 )
+
+[node name="Platform4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 142, 101 )
+scale = Vector2( 0.149925, 0.129288 )
+
+[node name="Platform5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 142, 136 )
+scale = Vector2( 0.130828, 0.115983 )
+
+[node name="Platform6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 187, 170 )
+scale = Vector2( 0.152156, 0.126277 )
+
+[node name="Platform7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 239, 171 )
+scale = Vector2( 0.1391, 0.117153 )
+
+[node name="Platform8" parent="." instance=ExtResource( 11 )]
+position = Vector2( 240, 207 )
+scale = Vector2( 0.129023, 0.130964 )
+
+[node name="Reload" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 46.0
+margin_right = 624.0
+margin_bottom = 277.0
+rect_scale = Vector2( 0.189607, -0.0869054 )
+icon = ExtResource( 21 )
+
+[node name="Back" type="Button" parent="."]
+margin_left = 441.0
+margin_top = 27.0
+margin_right = 469.0
+margin_bottom = 47.0
+rect_scale = Vector2( 1.52079, 0.930659 )
+text = "<<"
+
+[node name="Photo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 254, 148 )
+scale = Vector2( 0.388702, 0.388702 )
+texture = ExtResource( 22 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+volume_db = -15.0
+autoplay = true
+
+[connection signal="pressed" from="Reload" to="." method="_on_Reload_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

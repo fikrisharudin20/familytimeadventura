@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dgsound2.mp3-10dbdf7c98c3299d198aae015ef99399.mp3str"
+
+[deps]
+
+source_file="res://dgsound2.mp3"
+dest_files=[ "res://.import/dgsound2.mp3-10dbdf7c98c3299d198aae015ef99399.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

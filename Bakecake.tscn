@@ -1,0 +1,119 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/pixil-frame-0 (1).png" type="Texture" id=1]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/pixil-frame-0 (4).png" type="Texture" id=2]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Pixilart selection (1).png" type="Texture" id=3]
+[ext_resource path="res://Bakecake.gd" type="Script" id=4]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bake2.png" type="Texture" id=5]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/bake1.png" type="Texture" id=6]
+[ext_resource path="res://Groundbook.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/egg.png" type="Texture" id=8]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/milk.png" type="Texture" id=9]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/stobeli.png" type="Texture" id=10]
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/cakepola.png" type="Texture" id=12]
+[ext_resource path="res://gamemusic.mp3" type="AudioStream" id=13]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 17.508, 94.0276 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 59.3021, 94.782 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[node name="Bakecake" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 254.383, 151.772 )
+scale = Vector2( 0.770981, 0.674454 )
+texture = ExtResource( 1 )
+
+[node name="Kitchen" type="Sprite" parent="."]
+position = Vector2( 304, 160 )
+scale = Vector2( 0.679564, 0.679564 )
+texture = ExtResource( 2 )
+
+[node name="CloseDoor" type="Area2D" parent="Kitchen"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kitchen/CloseDoor"]
+position = Vector2( 210.279, 69.3123 )
+shape = SubResource( 2 )
+
+[node name="Milk" parent="." instance=ExtResource( 7 )]
+position = Vector2( 411, 211 )
+scale = Vector2( 0.294632, 0.273272 )
+
+[node name="Sprite" type="Sprite" parent="Milk"]
+texture = ExtResource( 9 )
+
+[node name="Egg" parent="." instance=ExtResource( 7 )]
+position = Vector2( 380, 167 )
+scale = Vector2( 0.312267, 0.281817 )
+
+[node name="Sprite" type="Sprite" parent="Egg"]
+scale = Vector2( 1, 1.0315 )
+texture = ExtResource( 8 )
+
+[node name="Strawberry" parent="." instance=ExtResource( 7 )]
+position = Vector2( 380, 236 )
+scale = Vector2( 0.28853, 0.28853 )
+
+[node name="Sprite" type="Sprite" parent="Strawberry"]
+texture = ExtResource( 10 )
+
+[node name="FridgeDoor" type="Sprite" parent="."]
+position = Vector2( 403, 205 )
+scale = Vector2( 0.691375, 0.685784 )
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="FridgeDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FridgeDoor/Area2D"]
+position = Vector2( -6.10352e-05, -3.05176e-05 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 100, 227 )
+scale = Vector2( 1.71875, 1.71875 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="Platy" parent="." instance=ExtResource( 11 )]
+position = Vector2( 107, 245 )
+scale = Vector2( 0.421262, 0.293334 )
+
+[node name="Go Back" type="Button" parent="."]
+margin_left = 424.0
+margin_top = 15.0
+margin_right = 441.0
+margin_bottom = 35.0
+text = "<<"
+
+[node name="Polaroid" type="Sprite" parent="."]
+visible = false
+position = Vector2( 264, 132 )
+scale = Vector2( 0.50581, 0.50581 )
+texture = ExtResource( 12 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -15.0
+autoplay = true
+
+[connection signal="input_event" from="Kitchen/CloseDoor" to="." method="_on_CloseDoor_input_event"]
+[connection signal="mouse_entered" from="Kitchen/CloseDoor" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Kitchen/CloseDoor" to="." method="_on_Area2D_mouse_exited"]
+[connection signal="input_event" from="FridgeDoor/Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="FridgeDoor/Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="FridgeDoor/Area2D" to="." method="_on_Area2D_mouse_exited"]
+[connection signal="pressed" from="Go Back" to="." method="_on_Go_Back_pressed"]

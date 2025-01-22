@@ -1,0 +1,80 @@
+{
+	"events": [
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 0.005,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1737326501.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://dialoguesound.mp3",
+			"volume": 0
+		},
+		{
+			"character": "character-1737326501.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angy",
+			"text": "UGH! This is so not cool! "
+		},
+		{
+			"character": "character-1737326501.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Oh Hi Zoro, sorry, I am in a bit of a ruckus. I bought all of these books and its been bothering me on where to put these! "
+		},
+		{
+			"character": "character-1737326501.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "Default",
+			"question": "Can you help me out here in organizing these books? That would be awesome! :]"
+		},
+		{
+			"choice": "Sure! I love organizing ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "arrange_book",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Nope, c ya sis!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1737326440.json",
+		"name": "timeline-2.json"
+	}
+}
